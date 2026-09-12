@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>JavaScript Introduction Part 1</title>
+</head>
+
+<body onload="processB()">
+    <h1 id="msg" title="hello JavaScript introduction" style="color: #2b0e0e;">17 June JavaScript Introduction Part 1</h1>
+    <!-- <input type="button" value="button" onclick="process()"> -->
+    <button type="button" onclick="process()">change heading</button>
+    <h2>Random goes here <span></span> <span class="a"></span></h2>
+    <h3>after 1 second word will appear here<span></span></h3>
+
+    <script>
+        "use strict"
+        let x = 123;
+        x = 321;
+        // console.log(x);
+        // console.log("-------------------");
+        // const y=123;
+        // y=321            // not valid
+        // console.log("--------------");
+        const arr = [10, 20, 30]
+        arr[0] = 100;
+        // console.log(arr);
+        // console.log("-------------------");
+        const obj = { roll: 1001, name: "amit" }
+        obj.roll = 1002;
+        obj["name"] = "sumit";
+        // console.log(obj);
+        // ===============template literal=============
+        const roll = 5100;
+        const name = "ramesh kumar";
+        let msg;
+        // msg = "Roll= :"+roll+",Name: "+ name;
+        msg = `Roll: ${roll} Name: ${name}`
+        // console.log(msg);
+        // =================================================
+        function $(v) {
+            return document.querySelector(v);
+        };
+        function process() {
+            console.log("from process");
+            $("#msg").innerHTML = "hello JS";
+            $("#msg").title = "title Chnaged ";
+            $("#msg").style = "color:blue; backgroundColor:black";
+            $("#msg").style = "color:blue; background-color:black";
+            $("#msg").align = "center";
+        }
+        // ======================================================
+        let count = 0;
+        let timer = setInterval(() => {
+            document.querySelector("h2 span").innerHTML = parseInt(Math.random() * 10);
+            document.querySelector(".a").innerHTML =count+1;
+            count++;
+            if (count === 5) {
+                document.querySelector("h2 span").style = "color:red";
+                document.querySelector(".a").style = "color:red";
+                clearInterval(timer);
+            }
+        }, 1000)
+        // ==========================================================
+        function processB() {
+            // setTimeout(show(), 2000)
+            setInterval(() => {
+               show()
+            },1000);
+        }
+        function show() {
+            const dt=new Date()
+            document.querySelector("h3 span").innerHTML =`:  ${dt.toLocaleTimeString()}`;
+            document.querySelector("h3 span").style.color = "green";
+        }
+
+
+
+    </script>
+
+</body>
+
+</html>

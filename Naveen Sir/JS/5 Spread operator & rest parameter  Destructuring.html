@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <h1>Spread operator & rest parameter | Destructuring</h1>
+
+
+
+
+    <script>
+        /*
+        const x=[10,20,30];
+        // let y= x.slice(1,2);
+        // console.log("x :",x);
+        // console.log("----------------");
+        // console.log("Y :",y);
+        // console.log("----------------");
+        // const y=[...x]
+        const y=[...x,40,50,60,70]
+        console.log(y);
+        console.log("-----------");
+        console.log(x);
+        let z=y.slice(2,6)
+        console.log(z);
+        */
+
+        /*const stu={roll:201,name:"manish"};
+        const student={...stu,place:"noida",dept:"IT"};
+        console.log(student);
+        console.log(stu);*/
+
+        /*const stu = [
+            { roll: 201, name: "manish" },
+            { roll: 202, name: "Anish" },
+            { roll: 203, name: "Sanish" },
+            { roll: 204, name: "Panish" },
+            { roll: 205, name: "Tanish" },
+            { roll: 206, name: "Danish" },
+        ]
+        const student = [...stu,
+        { roll: 207, name: "fanish" },
+        { roll: 208, name: "Vanish" },
+        { roll: 209, name: "Nanish" },
+        { roll: 210, name: "Lanish" },
+        ]
+        console.log(student);
+        console.log(student.slice(7,10));
+        */
+
+        // =====================REST parameter=====================
+        /*function add(...numbers) {
+            console.log(numbers);
+        }
+        add(10,20,30,40);*/
+
+        /* function add(...numbers){
+                        
+             let total=0;
+             numbers.forEach((number)=>{
+                 console.log(number); 
+                 total=number+total;                           
+             })
+             console.log(total);        
+         }
+         add(10,20,30,40,50);*/
+        // =======================rest paramaters example================
+        /*const add = (...data) => {
+            // console.log(data);
+            // console.log("--------------");
+            let total = 0;
+            for (let v of data) {
+                total = v + total;
+            }
+            // console.log(total);
+            return total
+            console.log("-------");
+        }
+        console.log(add(10, 20, 30, 40));
+        console.log(add(10, 20, 30, 40, 50))
+        console.log(add(10, 20, 30, 40, 50, 60));
+        */
+
+        // =========================Destructing==============
+       /*
+        const car=["santro","bmw", "maruti", "Suzuki"];
+        // const car1=car[1]
+        // const car2=car[3]
+        // console.log(car[1]);
+        // console.log(car[2]);
+        // console.log(car1);
+        // console.log(car2);
+        // const [car1,car2]=car;
+        // console.log(car1);
+        // console.log(car2);
+        // const[car1,,car3]=car;
+        // console.log(car1,car3);
+        */
+
+        const obj={roll:101,name:"manish"};
+        const{roll,name}=obj;
+        console.log(roll);
+        console.log(name);
+        
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+    </script>
+</body>
+
+</html>

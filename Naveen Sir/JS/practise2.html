@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>practise 2 </title>
+    <style>
+        #football {
+            position: absolute;
+            top: 700px;
+            left: 400px;
+        }
+    </style>
+</head>
+
+<body onload="code()">
+    <img src="./footbal.png" alt="" width="100" height="100" id="football">
+
+
+    <script>
+        let x=700, y=400;
+        function code(e) {
+            switch (e.keycode) {
+                case 37: x = x - 10;
+                    break;
+
+                case 38: y = y - 5;
+                    break;
+
+                case 39: x = x + 10;
+                    break;
+
+                case 40: y = y + 5;
+                    break;
+            }
+
+            document.getElementById("football").style.left = x + "px";
+            document.getElementById("football").style.top = y + "px";
+        }
+
+    </script>
+</body>
+
+</html>

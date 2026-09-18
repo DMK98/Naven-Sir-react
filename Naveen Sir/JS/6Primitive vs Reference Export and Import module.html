@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Primitive vs Reference</title>
+</head>
+
+<body>
+    <h1>Primitive vs Reference | Export and Import module</h1>
+
+
+    <script type="module">
+        "use script"
+
+        /*
+        const x = 55;
+        let y = x;
+        y = 99;
+        console.log("X :", x);
+        console.log("Y :", y);
+        console.log("X :", x);
+
+        console.log("-----------");
+        const arr1 = [10, 20, 30];
+
+        const arr2 = arr1;
+        arr2[1] = 200;
+        console.log("arr1 :", arr1);
+        console.log("arr2 :", arr2);
+        console.log("arr1 :", arr1);
+        console.log("-----------------");
+        const obj = { roll: 21, name: "manish" };
+        const newObj = obj;
+        newObj.roll = 22
+        newObj.name = "kunal"
+        console.log(obj);
+        console.log(newObj);
+
+        let a = [1, 2, 3];
+        let b = a;
+        b.push(4);
+        console.log(a);
+        console.log(b);
+        */
+        
+        /*const arr1 = [10, 20, 30];
+        const arr2= [...arr1,40]
+        console.log(arr1);
+        console.log(arr2);
+        arr2[3]=300;
+        console.log(arr1);
+        console.log(arr2);     
+        console.log("-----------------");
+        */
+
+       /* const obj = { roll: 21, name: "manish" };
+        const newObj = {...obj, place:"noida"};
+        // newObj.roll = 22
+        // newObj.name = "kunal"
+        console.log(obj);
+        console.log(newObj);
+        console.log(obj);
+        */
+
+        // import {address,show} from "/demo.js"
+        // import {address as addr,show as display} from "/demo.js"
+        // import {show} from "/demo.js"
+        // import showRecord from "/demo.js"
+        import showR from "/demo.js"
+        // import {PI,CLR,CN} from "/try.js"
+        import * as ABC from "/try.js"
+        // console.log(addr);
+        // console.log(address);
+        
+        // display()
+        // show()
+        // showRecord()
+        console.log(ABC.PI,ABC.CLR,ABC.CN);
+        
+        showR()
+
+
+
+
+    </script>
+</body>
+
+</html>

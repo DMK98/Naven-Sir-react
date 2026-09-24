@@ -1,8 +1,15 @@
-import ReactDom, { createRoot } from "react-dom/client";
-import App from "./app";
-const root = createRoot(document.getElementById("root"));
+import ReactDom from "react-dom/client";
+
+const root = ReactDom.createRoot(document.getElementById("root"));
+// import App from "./app";
 // import { Student } from "./student";
 // import Stu from "./student.jsx"; 
+
+// import { App } from "./6class/app";
+// import { Diy3 } from "./DIY practise/diy3";
+import { App } from "./6class/app";
+import { App2 } from "./6class/app2";
+
 /*const Student = () => {
     return (
         <div>
@@ -30,5 +37,8 @@ const element =
 root.render(element)
 */
 
-root.render(<App/>)
+// root.render(<App/>)
 
+// root.render(<App/>)
+root.render(<App2/>)
+// root.render(<Diy3/>)

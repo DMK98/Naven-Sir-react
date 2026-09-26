@@ -1,0 +1,19 @@
+input[type="text"] {
+    width: 200px;
+    font-size: 22px;
+    margin: 5px;
+    background: #a3c0eb;
+    color: #101e10;
+    text-align: right;
+
+}
+
+button {
+    width: 45px;
+    height: 45px;
+    font-size: 18px;
+    margin: 5px;
+    padding: 2px;
+    background: #a3c0eb;
+    color: #101e10;
+}

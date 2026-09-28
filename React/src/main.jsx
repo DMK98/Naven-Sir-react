@@ -12,7 +12,8 @@ const root = ReactDom.createRoot(document.getElementById("root"));
 // import { Diy4 } from "./DIY practise/diy4";
 // import { App } from "./7class/app";
 // import { App1 } from "./7class/app1";
-import { App } from "./8class/app";
+// import { App } from "./8class/app";
+import { App } from "./9class/app";
 
 /*const Student = () => {
     return (

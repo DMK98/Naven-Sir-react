@@ -1,5 +1,5 @@
-import { Calculator } from "./calculator"
-// import App1
+// import { Calculator } from "./calculator"
+import {App1} from "../8class/app1" 
 const App=()=>{
     return(
         <>
@@ -9,6 +9,7 @@ const App=()=>{
         {/* <Calculator/>
         <Calculator/>
         <Calculator/> */}
+        <App1/>
         </>
     )
 

@@ -5,7 +5,9 @@ const App1 = () => {
     setInterval(() => {
         setDt(new Date())
     },1000);
-   },[])
+   },[]);
+  
+   
     return (
         <>
             <h2>App1 Component</h2>

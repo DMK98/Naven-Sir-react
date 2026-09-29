@@ -19,7 +19,10 @@ const root = ReactDom.createRoot(document.getElementById("root"));
 // import { App1 } from "./7class/app1";
 // import { App } from "./8class/app";
 // import { App } from "./9class/app";
-import { App } from "./10class/app";
+// import { App } from "./10class/app";
+// import { Diy7 } from "./DIY practise/diy7";
+// import { Diy8 } from "./DIY practise/diy8";
+import { Diy9 } from "./DIY practise/diy9";
 
 
 /*const Student = () => {
@@ -51,7 +54,7 @@ root.render(element)
 
 // root.render(<App/>)
 
-root.render(<App/>)
+// root.render(<App />)
 // root.render(<App1/>)
 // root.render(<App2/>)
 // root.render(<Diy4/>)
@@ -59,3 +62,6 @@ root.render(<App/>)
 // root.render(<Diy3/>)
 // root.render(<Diytest5/>)
 // root.render(<Diy6/>)
+// root.render(<Diy7 />)
+// root.render(<Diy8/>)
+root.render(<Diy9/>)

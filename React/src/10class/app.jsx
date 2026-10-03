@@ -1,5 +1,5 @@
 import { useEffect } from "react";
-import { App1 } from "./app1";
+import { App8 } from "./app8";
 const App = () => {
     // useEffect(()=>{
     //     console.log(" I am here");        
@@ -12,7 +12,9 @@ const App = () => {
             <p>29 July | Component Lifecycle using <br /> useEffect | Part 1 & 2</p> */}
             <hr />
 
-            <App1/>
+            {/* <App1/> */}
+            {/* <App/> */}
+            <App8/>
         </>
     );
     // console.log("after return");

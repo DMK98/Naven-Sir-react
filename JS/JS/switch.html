@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <h3>learning switch case</h3>
+    <label>
+        enter no from 1 to 7 <input type="number" class="input">
+    </label>
+    <button class="btn">check day</button>
+    <p></p>
+
+
+    <script>
+        const button = document.querySelector(".btn");
+
+        button.addEventListener("click", () => {
+            let no = Number(document.querySelector(".input").value);
+            const output = document.querySelector("p");
+            let week=/^[1-7]$/;
+            // console.log(no);
+            // console.log(output);
+            if(week.test(no)===false){
+                    output.innerHTML = "Please enter a number from 1 to 7";
+                    return;
+            }
+            if (no === 1) {
+                output.innerHTML = "monday";                 
+                // console.log("monday");
+            } else if (no === 2) {
+                // console.log("tuesday");
+                output.innerHTML = "tuesday";
+            }else if (no === 3) {
+                // console.log("tuesday");
+                output.innerHTML = "wed";
+            }else if (no === 4) {
+                // console.log("tuesday");
+                output.innerHTML = "thurs";
+            }else if (no === 5) {
+                // console.log("tuesday");
+                output.innerHTML = "fri";
+            }
+            else if (no === 6) {
+                // console.log("tuesday");
+                output.innerHTML = "sat";
+            }
+            else if (no === 7) {
+                // console.log("tuesday");
+                output.innerHTML = "sun";
+            }
+           
+        })
+    </script>
+</body>
+
+</html>

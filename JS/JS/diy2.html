@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ifElse</title>
+</head>
+
+<body>
+    <label>Enter Your age :
+        <input type="number" class="input">
+    </label>
+    <button class="btn"> Check Age </button>
+    <p></p>
+
+    <script>
+
+        const button = document.querySelector(".btn");
+        const output= document.querySelector("p");       
+        function checkAge() {
+            const no = document.querySelector(".input").value;
+            if (no==="") {
+                console.log("please enter your age");
+                 output.innerHTML="please enter your age";
+                return;
+            } 
+            const age=Number(no)
+            if (age < 0) {
+                // console.log("Age cannot be negative");
+                 output.innerHTML="Age cannot be negative";
+                return;
+            }
+
+            if (age < 18) {
+                // console.log("You are not eligible");
+                output.innerHTML="You are not eligible";
+            }else if (age >= 100) {
+                // console.log("age shole be under 100");
+                output.innerHTML="age should be under 100";
+            }else if (age >= 18) {
+                // console.log("You are eligible");
+                output.innerHTML="You are eligible";
+            }
+            
+        }
+        button.addEventListener("click", checkAge);
+
+    </script>
+</body>
+
+</html>

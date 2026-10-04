@@ -1,7 +1,7 @@
 import ReactDom from "react-dom/client";
 
 const root = ReactDom.createRoot(document.getElementById("root"));
-const root1 = ReactDom.createRoot(document.getElementById("root1"));
+// const root1 = ReactDom.createRoot(document.getElementById("root1"));
 // import App from "./app";
 // import { Student } from "./student";
 // import Stu from "./student.jsx"; 
@@ -20,8 +20,9 @@ const root1 = ReactDom.createRoot(document.getElementById("root1"));
 // import { App1 } from "./7class/app1";
 // import { App } from "./8class/app";
 // import { App } from "./9class/app";
-import { App } from "./11class/app";
-import { Diy10 } from "./DIY practise/diy10";
+// import { App } from "./11class/app";
+import { App } from "./12class/app";
+// import { Diy10 } from "./DIY practise/diy10";
 // import { Diy7 } from "./DIY practise/diy7";
 // import { Diy8 } from "./DIY practise/diy8";
 // import { Diy9 } from "./DIY practise/diy9";
@@ -69,4 +70,4 @@ root.render(<App />)
 // root.render(<Diy8/>)
 // root.render(<Diy9/>)
 // root.render(<Diy10/>)
-root1.render(<Diy10/>)
+// root1.render(<Diy10/>)

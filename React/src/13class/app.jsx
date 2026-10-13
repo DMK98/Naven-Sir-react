@@ -8,7 +8,9 @@ const App = () => {
     const handleUpdate=(r,nm)=>{
         setData({roll:r,name:nm})
     }
-
+    const reset=()=>{
+        setData({ roll: 100, name: "mohit" });
+    }
     return (
         <>
             <p>useContext + useState | Part 1</p>
@@ -18,9 +20,11 @@ const App = () => {
             <button 
             onClick={()=>{handleUpdate(900,"mohitkhanna")}}>updateFromApp
             </button>
+
+             <button onClick={reset}>REST from APP</button>
             <hr />
 
-            <MyContext.Provider value={{data,handleUpdate}}>
+            <MyContext.Provider value={{data,handleUpdate,reset}}>
                 <Process />
             </MyContext.Provider>
 

@@ -31,8 +31,13 @@ const root = ReactDom.createRoot(document.getElementById("root"));
 // import { Diy12 } from "./DIY practise/diy12";
 // import { Diy13 } from "./DIY practise/diy13";
 // import { Diy14 } from "./DIY practise/diy14";
-import { App } from "./13class/app";
-
+// import { App } from "./13class/app";
+// import { App } from "./DIY practise/diy15A";
+// import { App } from "./DIY practise/useEffect/app";
+//  import { App } from "./14class/app";
+//  import { App } from "./14class/14B/app";
+ import { App } from "./15class/app";
+//  import { App } from "./16class/app";
 
 /*const Student = () => {
     return (

@@ -1,6 +1,9 @@
-import { useState } from "react"
+import { useState,useContext } from "react";
+import { MyContext } from "./app";
+
 const Input = () => {
     const[data,setData]=useState({roll:"",name:"",age:"",email:""});
+      const { dispatch } = useContext(MyContext);
     const[records,setrecords]=useState([]);
 
     const handleInput=(e)=>{
@@ -13,7 +16,8 @@ const Input = () => {
             setrecords(rcds);
             setData({roll:"",name:"",age:"",email:""});
             console.log("RECORDS",records);                     
-            console.log("DATA",data);           
+            console.log("DATA",data);
+            dispatch({type:"add", payload:data})           
     }
 
 

@@ -2,20 +2,12 @@ import axios from "axios";
 import { useState } from "react";
 const App = () => {
     const [user, setUser] = useState([]);
-    const handleClick = () => {
+    const handleClick = async () => {
+        const response = await axios.get("https://jsonplaceholder.typicode.com/posts");
+        console.log(response);
+        setUser(response.data)
 
-        async function getUser() {
-            try {
-                const response = await axios.get("https://jsonplaceholder.typicode.com/posts");
-                console.log(response);
-                setUser(response.data)
-            } catch (error) {
-                console.error(error);
-            }
-        }
-        getUser()
     }
-
     return (
         <>
             <h3>26 Aug | Consume API | Part 1 & 2 jSON place holder</h3>
@@ -23,18 +15,18 @@ const App = () => {
             <button onClick={handleClick}>click me </button>
             <hr />
             {
-                user.map(usr=>{
-                    return(
+                user.map(usr => {
+                    return (
                         <div key={usr.id}>
                             <h2>{usr.title}</h2>
                             <p>{usr.body}</p>
-                            <p>{}</p>
+                            <p>{ }</p>
 
                         </div>
                     )
                 })
             }
-            
+
         </>
     )
 }

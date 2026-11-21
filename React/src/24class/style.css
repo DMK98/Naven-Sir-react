@@ -1,0 +1,13 @@
+.box{
+    box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+    border: 1px solid rebeccapurple;
+    border-radius: 5px;
+    display: inline-block;
+    text-align: center;
+    text-wrap: wrap;
+    width: 200px;
+    overflow-wrap: anywhere;
+    word-break: normal;
+    box-sizing: border-box;
+    padding: 5px;
+}

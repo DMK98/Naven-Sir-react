@@ -1,45 +1,49 @@
-import { useRef } from "react";
-import "./style.css"
+import { useState } from "react";
 const App = () => {
-    const forName = useRef();
-    const forAge = useRef();
-    const forEmail = useRef();
-    const forFile =useRef()
-
+    const [data, setdata] = useState({ name: "", age: "", email: "", address: "", country: "", save: true, gender: "male" });
+    const [show, setShow] = useState(null);
+    const handleChange = (e) => {
+        setdata({ ...data, [e.target.name]: e.target.value });
+        // console.log(data);
+    }
     const handleSave = (e) => {
-        e.preventDefault()
-        console.log("Name:", forName.current.value);
-        console.log("Age:", forAge.current.value);
-        console.log("Email:", forEmail.current.value);
-        console.log("File:", forFile.current.value);
-        console.log(forName.current);
-        console.log(forName.current.value);
-
-        forName.current.value = "";
-        forAge.current.value = "";
-        forEmail.current.value = "";
-        forName.current.focus();
-
+        e.preventDefault();
+        console.log(data);
+        setShow(data)
     }
 
-
     return (
+
         <>
-            <h3>2 Sep | Forms | Forms Validation | Part 1 & 2</h3>
+            <h3> react form validation </h3>
             <form onSubmit={handleSave}>
-                name: <input type="text" ref={forName} /> <br />
-                Age: <input type="number" ref={forAge} /> <br />
-                Email: <input type="email" ref={forEmail} />  <br />
-                Select Any file : <input type="file" ref={forFile} /> <br />
-                <input type="submit" value="save" />
+                Name:<input type="text" id="name" name="name" value={data.name} onChange={handleChange} required pattern="[a-z]{5,10}" title="username must between 5 to 10 character spaces are not allowed" /> <br />
+                Age:<input type="number" id="age" name="age" value={data.age} onChange={handleChange} required min={10} max={90} title="age must be between 10 to 90" /> <br />
+                Email:<input type="text" id="email" name="email" value={data.email} onChange={handleChange} required pattern="[a-zA-Z0-9._]+@[a-zA-Z]+\.[a-zA-Z]{2,4}" title="eg:abc@gmail.com" /> <br />
+                Address:<textarea rows="10" cols="22" name="address" id="address" value={data.address} onChange={handleChange}></textarea> <br />
+                country : <select name="country" id="country" value={data.country} onChange={handleChange}>
+                    <option value="" disabled>Select Country</option>
+                    <option value="India" >India</option>
+                    <option value="america" >america</option>
+                    <option value="australia" >australia</option>
+                </select> <br />
+                <button>Save</button><br />
             </form>
 
+            {show && (
+                <>
+                    Name :  {data.name} <br />
+                    Age :  {data.age} <br />
+                    Email :  {data.email} <br />
+                    address : {data.address} <br />
+                    country : {data.country}<br />
+                </>
+            )
 
 
+
+            }
         </>
-
     )
 }
-
 export { App }
-// 9:29

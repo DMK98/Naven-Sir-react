@@ -1,0 +1,29 @@
+*{margin: 0;padding: 0;}
+
+.box {
+    padding: 5px;
+    margin: 5px;
+    width: fit-content;  
+    background: #ffffff;
+    border-radius: 16px;
+    box-shadow:
+        0 4px 6px rgba(0, 0, 0, 0.04),
+        0 10px 25px rgba(0, 0, 0, 0.08);
+    border: 1px solid #f1f1f1;
+    display: inline-block;
+    text-align: center;
+    transition: all 0.3s ease;
+}
+.box:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 15px 35px rgba(0, 0, 0, 0.12);
+}
+img{
+    width: 150px;
+    height: 150px;
+    border-radius: 50%;
+    object-fit: cover;
+}
+button{
+    padding: 5px;
+}
